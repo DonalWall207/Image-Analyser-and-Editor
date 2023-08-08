@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assigment01deepspaceanalyser.Controller">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                <TabPane layoutX="-4.0" prefHeight="418.0" prefWidth="648.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Image Select">
+                            <content>
+                                <AnchorPane fx:id="satSlider" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                    <children>
+                                        <ImageView fx:id="view" fitHeight="256.0" fitWidth="368.0" layoutX="70.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true" />
+                                        <Slider fx:id="hueSlider" blockIncrement="0.5" layoutX="484.0" layoutY="68.0" majorTickUnit="1.0" max="1.0" min="-1.0" onMouseDragged="#hueSlider" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                                        <Slider fx:id="brightnessSlider" blockIncrement="1.0" layoutX="485.0" layoutY="178.0" majorTickUnit="1.0" max="1.0" min="-1.0" onMouseDragged="#brightnessSlider" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                                        <Slider fx:id="saturationSlider" layoutX="485.0" layoutY="123.0" majorTickUnit="1.0" max="1.0" min="-1.0" onMouseDragged="#saturationSlider" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                                        <Label layoutX="543.0" layoutY="51.0" text="Hue" />
+                                        <Label layoutX="526.0" layoutY="106.0" text="Saturation" />
+                                        <Label layoutX="527.0" layoutY="161.0" text="Luminance" />
+                                        <Button layoutX="531.0" layoutY="13.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+                                        <Button defaultButton="true" layoutX="208.0" layoutY="25.0" mnemonicParsing="false" onAction="#open" text="Select Image" textAlignment="CENTER" />
+                                        <Label layoutX="485.0" layoutY="244.0" text="File Name:" />
+                                        <Label fx:id="fileName" layoutX="548.0" layoutY="244.0" />
+                                        <Label layoutX="484.0" layoutY="277.0" text="File Size:" />
+                                        <Label fx:id="fileSize" layoutX="536.0" layoutY="275.0" prefHeight="22.0" prefWidth="93.0" />
+                                        <Button layoutX="528.0" layoutY="316.0" mnemonicParsing="false" onAction="#exit" prefHeight="26.0" prefWidth="54.0" text="Exit" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Black and White">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <ImageView fx:id="blackAndWhiteView" fitHeight="256.0" fitWidth="368.0" layoutX="12.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                                        <Slider fx:id="hueSlider1" blockIncrement="0.5" layoutX="484.0" layoutY="68.0" majorTickUnit="1.0" max="1.0" min="-1.0" onMouseDragged="#hueSlider1" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                                        <Slider fx:id="brightnessSlider1" blockIncrement="1.0" layoutX="485.0" layoutY="178.0" majorTickUnit="1.0" max="1.0" min="-1.0" onMouseDragged="#brightnessSlider" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                                        <Slider fx:id="saturationSlider1" layoutX="485.0" layoutY="123.0" majorTickUnit="1.0" max="1.0" min="-1.0" onMouseDragged="#saturationSlider" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                                        <Label layoutX="543.0" layoutY="51.0" text="Hue" />
+                                        <Label layoutX="526.0" layoutY="106.0" text="Brightness" />
+                                        <Label layoutX="527.0" layoutY="161.0" text="Saturation" />
+                                        <Button layoutX="531.0" layoutY="13.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+                              <Button layoutX="539.0" layoutY="275.0" mnemonicParsing="false" onAction="#exit" prefHeight="26.0" prefWidth="62.0" text="Exit">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding></Button>
+                              <Button layoutX="393.0" layoutY="325.0" mnemonicParsing="false" onAction="#totalCelestialObjects" prefHeight="39.0" prefWidth="241.0" text="The Total Amount Of Stars" />
+                              <Button layoutX="444.0" layoutY="275.0" mnemonicParsing="false" onAction="#colorDisjointSets" text="Color Stars">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding></Button>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
